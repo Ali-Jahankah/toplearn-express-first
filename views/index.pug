@@ -1,0 +1,8 @@
+extends ./layouts/main.pug
+
+block content
+    h1 This is the index page
+    div.center
+        if arr.length>0
+            each item in arr
+                h1 #{item} 
