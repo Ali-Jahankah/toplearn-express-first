@@ -20,7 +20,8 @@ app.engine(
     partialDir: "views/partials",
   })
 );
-app.set("view engine", "hbs");
+// app.set("view engine", "hbs");
+app.set("view engine", "ejs");
 app.set("views", "views");
 app.use("/home", homeRoutes);
 app.use(adminRoutes);
@@ -37,6 +38,7 @@ app.get("/pug/index", (req, res) => {
     title: "Pug Index",
     arr: arr,
     handlebarsTitle: "This is Handle Bars",
+    ejs: "EJS Engine",
   });
 });
 app.use((req, res) => {
